@@ -1,15 +1,22 @@
-import express from 'express'
-import helmet from 'helmet'
-import cors from 'cors'
 import compression from 'compression'
 import cookieParser from 'cookie-parser'
+import cors from 'cors'
+import express from 'express'
+import helmet from 'helmet'
 
-import { DATABASE_URL } from './env/variable.env'
 import connectDb from './config/db.config'
+import { DATABASE_URL } from './env/variable.env'
 
 // http constant
 import ConstantHttpCode from './constants/http.code.constant'
 import ConstantHttpReason from './constants/http.reason.constant'
+
+// api constant
+import ConstantAPI from './constants/api.constant'
+
+// routers
+import AuthRouter from './routers/auth.router'
+import UserRouter from './routers/user.router'
 
 connectDb(DATABASE_URL)
 
@@ -26,7 +33,7 @@ app.use(cookieParser())
 
 app.get('/', (req, res, next) => {
   try {
-    res.status(ConstantHttpCode.OK).json({
+    return res.status(ConstantHttpCode.OK).json({
       status: {
         code: ConstantHttpCode.OK,
         msg: ConstantHttpReason.OK,
@@ -34,8 +41,11 @@ app.get('/', (req, res, next) => {
       API: 'Work',
     })
   } catch (err) {
-    next(err)
+    return next(err)
   }
 })
+
+app.use(ConstantAPI.API_AUTH, AuthRouter)
+app.use(ConstantAPI.API_USERS, UserRouter)
 
 export default app

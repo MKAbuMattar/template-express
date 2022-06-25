@@ -11,5 +11,6 @@
   "rules": {
     "prettier/prettier": "error",
     "import/no-named-as-default": "off",
+    "no-underscore-dangle": "off"
   }
 }
