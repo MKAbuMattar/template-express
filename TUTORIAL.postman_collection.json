@@ -1,0 +1,1944 @@
+{
+	"info": {
+		"_postman_id": "ab4c85e0-166e-4687-b98e-868fa0d5664e",
+		"name": "TUTORIAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "AUTH_REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"{{username}}\",\n    \"name\": \"{{name}}\",\n    \"email\": \"{{email}}\",\n    \"password\": \"{{password}}\",\n    \"phone\": \"{{phone}}\",\n    \"address\": \"{{address}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}{{api_auth}}{{auth_register}}",
+							"host": [
+								"{{path}}{{api_auth}}{{auth_register}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "AUTH_REGISTER | Created 201",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"MKAbuMattar\",\n    \"name\": \"Mohammad Abu Mattar\",\n    \"email\": \"mohammad.khaled@outlook.com\",\n    \"password\": \"123456789@Password\",\n    \"phone\": \"+96279650332\",\n    \"address\": \"Amman, Jordan\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}{{api_auth}}{{auth_register}}",
+									"host": [
+										"{{path}}{{api_auth}}{{auth_register}}"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "361"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"169-wr1O4TiX4CUFN/0gC1tLMJqTKjQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jun 2022 11:29:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"code\": 201,\n        \"msg\": \"Created\"\n    },\n    \"msg\": \"user is create success, please login\",\n    \"data\": {\n        \"username\": \"MKAbuMattar\",\n        \"name\": \"Mohammad Abu Mattar\",\n        \"email\": \"mohammad.khaled@outlook.com\",\n        \"phone\": \"+96279650332\",\n        \"address\": \"Amman, Jordan\",\n        \"isAdmin\": false,\n        \"_id\": \"62b6f1ab5629926d0e62e206\",\n        \"createdAt\": \"2022-06-25T11:29:47.933Z\",\n        \"updatedAt\": \"2022-06-25T11:29:47.933Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "AUTH_LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}{{api_auth}}{{auth_login}}",
+							"host": [
+								"{{path}}{{api_auth}}{{auth_login}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "AUTH_LOGIN | OK 200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"mohammad.khaled@outlook.com\",\n    \"password\": \"123456789@Password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}{{api_auth}}{{auth_login}}",
+									"host": [
+										"{{path}}{{api_auth}}{{auth_login}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "529"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"211-hSJkREYuvq6JjgCJqoMbfQAuroE\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jun 2022 11:32:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    },\n    \"data\": {\n        \"user\": {\n            \"_id\": \"62b6f1ab5629926d0e62e206\",\n            \"username\": \"MKAbuMattar\",\n            \"name\": \"Mohammad Abu Mattar\",\n            \"email\": \"mohammad.khaled@outlook.com\",\n            \"phone\": \"+96279650332\",\n            \"address\": \"Amman, Jordan\",\n            \"isAdmin\": false,\n            \"createdAt\": \"2022-06-25T11:29:47.933Z\",\n            \"updatedAt\": \"2022-06-25T11:29:47.933Z\"\n        },\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYjZmMWFiNTYyOTkyNmQwZTYyZTIwNiIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NTYxNTY3NTUsImV4cCI6MTY1NjQxNTk1NX0.m4V4UvS9NtcKIbZOVLuBsNId2600Bq6higNJPmCdiUk\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "USER_UPDATE_USERNAME",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{accessToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"MKAbuMattar\",\n    \"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}{{api_users}}{{user_update_username}}/{{user_id}}",
+							"host": [
+								"{{path}}{{api_users}}{{user_update_username}}"
+							],
+							"path": [
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_UPDATE_USERNAME",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{accessToken}}",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"MKAbuMattar\",\n    \"password\": \"{{password}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}{{api_users}}{{user_update_username}}/{{user_id}}",
+									"host": [
+										"{{path}}{{api_users}}{{user_update_username}}"
+									],
+									"path": [
+										"{{user_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "354"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"162-G0F9/nAnR2POBF0yryM9fU8pwAk\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jun 2022 14:47:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    },\n    \"msg\": \"username is change success\",\n    \"data\": {\n        \"user\": {\n            \"_id\": \"62b711e323908a918dcfacfb\",\n            \"username\": \"MKAbuMattar\",\n            \"name\": \"Mohammad Abu Mattar\",\n            \"email\": \"mohammad.khaled@outlook.com\",\n            \"phone\": \"+96279650332\",\n            \"address\": \"Amman, Jordan\",\n            \"isAdmin\": true,\n            \"createdAt\": \"2022-06-25T13:47:15.155Z\",\n            \"updatedAt\": \"2022-06-25T14:47:51.703Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_UPDATE_NAME",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{accessToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mohammad Abu Mattar\",\n    \"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}{{api_users}}{{user_update_name}}/{{user_id}}",
+							"host": [
+								"{{path}}{{api_users}}{{user_update_name}}"
+							],
+							"path": [
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_UPDATE_NAME",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{accessToken}}",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Mohammad Abu Mattar\",\n    \"password\": \"{{password}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}{{api_users}}{{user_update_name}}/{{user_id}}",
+									"host": [
+										"{{path}}{{api_users}}{{user_update_name}}"
+									],
+									"path": [
+										"{{user_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "350"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15e-A52ccbNfYsylvZiM/aI1sCBQ0ic\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jun 2022 14:48:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    },\n    \"msg\": \"name is change success\",\n    \"data\": {\n        \"user\": {\n            \"_id\": \"62b711e323908a918dcfacfb\",\n            \"username\": \"MKAbuMattar\",\n            \"name\": \"Mohammad Abu Mattar\",\n            \"email\": \"mohammad.khaled@outlook.com\",\n            \"phone\": \"+96279650332\",\n            \"address\": \"Amman, Jordan\",\n            \"isAdmin\": true,\n            \"createdAt\": \"2022-06-25T13:47:15.155Z\",\n            \"updatedAt\": \"2022-06-25T14:48:15.016Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_UPDATE_EMAIL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{accessToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}{{api_users}}{{user_update_email}}/{{user_id}}",
+							"host": [
+								"{{path}}{{api_users}}{{user_update_email}}"
+							],
+							"path": [
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_UPDATE_EMAIL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{accessToken}}",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"{{email}}\",\n    \"password\": \"{{password}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}{{api_users}}{{user_update_email}}/{{user_id}}",
+									"host": [
+										"{{path}}{{api_users}}{{user_update_email}}"
+									],
+									"path": [
+										"{{user_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "351"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15f-oGkyJkJNK9wS3SguXAL5Ecry2hQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jun 2022 14:48:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    },\n    \"msg\": \"email is change success\",\n    \"data\": {\n        \"user\": {\n            \"_id\": \"62b711e323908a918dcfacfb\",\n            \"username\": \"MKAbuMattar\",\n            \"name\": \"Mohammad Abu Mattar\",\n            \"email\": \"mohammad.khaled@outlook.com\",\n            \"phone\": \"+96279650332\",\n            \"address\": \"Amman, Jordan\",\n            \"isAdmin\": true,\n            \"createdAt\": \"2022-06-25T13:47:15.155Z\",\n            \"updatedAt\": \"2022-06-25T14:48:33.549Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_UPDATE_PASSWORD",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{accessToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\": \"{{password}}1\",\n    \"newPassword\": \"{{password}}\",\n    \"confirmPassword\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}{{api_users}}{{user_update_password}}/{{user_id}}",
+							"host": [
+								"{{path}}{{api_users}}{{user_update_password}}"
+							],
+							"path": [
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_UPDATE_PASSWORD",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{accessToken}}",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"oldPassword\": \"{{password}}1\",\n    \"newPassword\": \"{{password}}\",\n    \"confirmPassword\": \"{{password}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}{{api_users}}{{user_update_password}}/{{user_id}}",
+									"host": [
+										"{{path}}{{api_users}}{{user_update_password}}"
+									],
+									"path": [
+										"{{user_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "354"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"162-gogPO26on48CrJOkOyFnOsy37W0\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jun 2022 14:48:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    },\n    \"msg\": \"password is change success\",\n    \"data\": {\n        \"user\": {\n            \"_id\": \"62b711e323908a918dcfacfb\",\n            \"username\": \"MKAbuMattar\",\n            \"name\": \"Mohammad Abu Mattar\",\n            \"email\": \"mohammad.khaled@outlook.com\",\n            \"phone\": \"+96279650332\",\n            \"address\": \"Amman, Jordan\",\n            \"isAdmin\": true,\n            \"createdAt\": \"2022-06-25T13:47:15.155Z\",\n            \"updatedAt\": \"2022-06-25T14:48:59.372Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_UPDATE_PHONE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{accessToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone\" : \"{{phone}}\",\n    \"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}{{api_users}}{{user_update_phone}}/{{user_id}}",
+							"host": [
+								"{{path}}{{api_users}}{{user_update_phone}}"
+							],
+							"path": [
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_UPDATE_PHONE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{accessToken}}",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone\" : \"{{phone}}\",\n    \"password\": \"{{password}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}{{api_users}}{{user_update_phone}}/{{user_id}}",
+									"host": [
+										"{{path}}{{api_users}}{{user_update_phone}}"
+									],
+									"path": [
+										"{{user_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "352"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"160-NeLU7eeNDeRiddX/H4qOAiVTp2o\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jun 2022 14:49:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    },\n    \"msg\": \"phone is change success\",\n    \"data\": {\n        \"user\": {\n            \"_id\": \"62b711e323908a918dcfacfb\",\n            \"username\": \"MKAbuMattar\",\n            \"name\": \"Mohammad Abu Mattar\",\n            \"email\": \"mohammad.khaled@outlook.com\",\n            \"phone\": \"+962790650332\",\n            \"address\": \"Amman, Jordan\",\n            \"isAdmin\": true,\n            \"createdAt\": \"2022-06-25T13:47:15.155Z\",\n            \"updatedAt\": \"2022-06-25T14:49:43.857Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_UPDATE_ADDRESS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{accessToken}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"address\": \"{{address}}\",\n    \"password\": \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{path}}{{api_users}}{{user_update_address}}/{{user_id}}",
+							"host": [
+								"{{path}}{{api_users}}{{user_update_address}}"
+							],
+							"path": [
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_UPDATE_ADDRESS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{accessToken}}",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"address\": \"{{address}}\",\n    \"password\": \"{{password}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{path}}{{api_users}}{{user_update_address}}/{{user_id}}",
+									"host": [
+										"{{path}}{{api_users}}{{user_update_address}}"
+									],
+									"path": [
+										"{{user_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "354"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"162-9eY9YLU+beVQc53ohErogtgjNIQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jun 2022 14:50:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    },\n    \"msg\": \"address is change success\",\n    \"data\": {\n        \"user\": {\n            \"_id\": \"62b711e323908a918dcfacfb\",\n            \"username\": \"MKAbuMattar\",\n            \"name\": \"Mohammad Abu Mattar\",\n            \"email\": \"mohammad.khaled@outlook.com\",\n            \"phone\": \"+962790650332\",\n            \"address\": \"Amman, Jordan\",\n            \"isAdmin\": true,\n            \"createdAt\": \"2022-06-25T13:47:15.155Z\",\n            \"updatedAt\": \"2022-06-25T14:50:04.700Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_DELETE",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{accessToken}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{path}}{{api_users}}{{user_delete}}/{{user_id}}",
+							"host": [
+								"{{path}}{{api_users}}{{user_delete}}"
+							],
+							"path": [
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_DELETE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{accessToken}}",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{path}}{{api_users}}{{user_delete}}/{{user_id}}",
+									"host": [
+										"{{path}}{{api_users}}{{user_delete}}"
+									],
+									"path": [
+										"{{user_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-JsgVNlhc/bwvH1taTPmuJDY7HIQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jun 2022 14:50:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    },\n    \"msg\": \"user is delete success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_GET",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{accessToken}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{path}}{{api_users}}{{user_get}}/{{user_id}}",
+							"host": [
+								"{{path}}{{api_users}}{{user_get}}"
+							],
+							"path": [
+								"{{user_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_GET",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{accessToken}}",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{path}}{{api_users}}{{user_get}}/{{user_id}}",
+									"host": [
+										"{{path}}{{api_users}}{{user_get}}"
+									],
+									"path": [
+										"{{user_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "342"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"156-13K1DqSUkuCiJQ/jqPPLitGp8aU\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jun 2022 14:50:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    },\n    \"msg\": \"user is found\",\n    \"data\": {\n        \"user\": {\n            \"_id\": \"62b711e323908a918dcfacfb\",\n            \"username\": \"MKAbuMattar\",\n            \"name\": \"Mohammad Abu Mattar\",\n            \"email\": \"mohammad.khaled@outlook.com\",\n            \"phone\": \"+962790650332\",\n            \"address\": \"Amman, Jordan\",\n            \"isAdmin\": true,\n            \"createdAt\": \"2022-06-25T13:47:15.155Z\",\n            \"updatedAt\": \"2022-06-25T14:50:04.700Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_GET_ALL",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{accessToken}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{path}}{{api_users}}{{user_get_all}}",
+							"host": [
+								"{{path}}{{api_users}}{{user_get_all}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_GET_ALL",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{accessToken}}",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{path}}{{api_users}}{{user_get_all}}",
+									"host": [
+										"{{path}}{{api_users}}{{user_get_all}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "345"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"159-wWnmah6uTA4MXYHqe9iZ/p2BWxE\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jun 2022 14:50:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    },\n    \"msg\": \"user is found\",\n    \"data\": {\n        \"users\": [\n            {\n                \"_id\": \"62b711e323908a918dcfacfb\",\n                \"username\": \"MKAbuMattar\",\n                \"name\": \"Mohammad Abu Mattar\",\n                \"email\": \"mohammad.khaled@outlook.com\",\n                \"phone\": \"+962790650332\",\n                \"address\": \"Amman, Jordan\",\n                \"isAdmin\": true,\n                \"createdAt\": \"2022-06-25T13:47:15.155Z\",\n                \"updatedAt\": \"2022-06-25T14:50:04.700Z\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "USER_GET_ALL_STATS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{accessToken}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{path}}{{api_users}}{{user_get_all_stats}}",
+							"host": [
+								"{{path}}{{api_users}}{{user_get_all_stats}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "USER_GET_ALL_STATS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{accessToken}}",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{path}}{{api_users}}{{user_get_all_stats}}",
+									"host": [
+										"{{path}}{{api_users}}{{user_get_all_stats}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-qJUL6p9php57810ot3kbGkhASyg\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 25 Jun 2022 14:50:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": {\n        \"code\": 200,\n        \"msg\": \"OK\"\n    },\n    \"msg\": \"user is found\",\n    \"data\": {\n        \"users\": []\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "username",
+			"value": "MKAbuMattar",
+			"type": "default"
+		},
+		{
+			"key": "name",
+			"value": "Mohammad Abu Mattar",
+			"type": "default"
+		},
+		{
+			"key": "email",
+			"value": "mohammad.khaled@outlook.com",
+			"type": "default"
+		},
+		{
+			"key": "password",
+			"value": "123456789@Password",
+			"type": "default"
+		},
+		{
+			"key": "phone",
+			"value": "+96279650332",
+			"type": "default"
+		},
+		{
+			"key": "address",
+			"value": "Amman, Jordan",
+			"type": "default"
+		},
+		{
+			"key": "user_id",
+			"value": "62b711e323908a918dcfacfb",
+			"type": "default"
+		},
+		{
+			"key": "accessToken",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyYjcxMWUzMjM5MDhhOTE4ZGNmYWNmYiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY1NjE2NDg1NiwiZXhwIjoxNjU2NDI0MDU2fQ.ZTeGv9wqLpWfKF26JU0g4Onv4qcw7PxdfvW0e3qKC84",
+			"type": "default"
+		},
+		{
+			"key": "path",
+			"value": "http://localhost:3030",
+			"type": "default"
+		},
+		{
+			"key": "api_auth",
+			"value": "/api/auth",
+			"type": "default"
+		},
+		{
+			"key": "api_users",
+			"value": "/api/users",
+			"type": "default"
+		},
+		{
+			"key": "auth_register",
+			"value": "/register",
+			"type": "default"
+		},
+		{
+			"key": "auth_login",
+			"value": "/login",
+			"type": "default"
+		},
+		{
+			"key": "user_update_username",
+			"value": "/update-username",
+			"type": "default"
+		},
+		{
+			"key": "user_update_name",
+			"value": "/update-name",
+			"type": "default"
+		},
+		{
+			"key": "user_update_email",
+			"value": "/update-email",
+			"type": "default"
+		},
+		{
+			"key": "user_update_password",
+			"value": "/update-password",
+			"type": "default"
+		},
+		{
+			"key": "user_update_phone",
+			"value": "/update-phone",
+			"type": "default"
+		},
+		{
+			"key": "user_update_address",
+			"value": "/update-address",
+			"type": "default"
+		},
+		{
+			"key": "user_delete",
+			"value": "/delete",
+			"type": "default"
+		},
+		{
+			"key": "user_get",
+			"value": "/find",
+			"type": "default"
+		},
+		{
+			"key": "user_get_all",
+			"value": "/",
+			"type": "default"
+		},
+		{
+			"key": "user_get_all_stats",
+			"value": "/stats",
+			"type": "default"
+		}
+	]
+}
