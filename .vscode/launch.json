@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "configurations": [
+    {
+      "name": "debug server",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "yarn dev"
+    }
+  ]
+}
